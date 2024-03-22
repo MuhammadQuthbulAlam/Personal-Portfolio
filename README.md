@@ -3,7 +3,7 @@
 This repository contains the code for my personal portfolio website built using HTML, CSS, and JavaScript. The portfolio showcases my skills, projects, and accomplishments, providing a glimpse into my professional journey.
 
 # Live Demo
-
+https://muhammadquthbulalam.github.io/Personal-Portfolio/
 # Prerequisites
 
 Before you begin, ensure you have met the following requirements:
@@ -16,7 +16,7 @@ To run this project locally, run this command on your git bash:
 
 Linux and macOS:
 
-sudo git clone
+sudo git clone 
 
 Windows:
 
