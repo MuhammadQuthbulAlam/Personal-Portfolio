@@ -16,11 +16,11 @@ To run this project locally, run this command on your git bash:
 
 Linux and macOS:
 
-sudo git clone 
+sudo git clone https://github.com/MuhammadQuthbulAlam/Personal-Portfolio
 
 Windows:
 
-git clone
+git clone https://github.com/MuhammadQuthbulAlam/Personal-Portfolio
 
 # License
 
