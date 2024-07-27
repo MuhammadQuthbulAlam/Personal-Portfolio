@@ -19,6 +19,17 @@
     --main-color:#0ef; 
  }
 
+ ::-webkit-scrollbar {
+   width: 7px;
+}
+::-webkit-scrollbar-track {
+   background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+   background: #0ef;
+   border-radius: 30px;
+}
+
  html{
     font-size: 62.5%;
     overflow-x:hidden;
@@ -329,6 +340,10 @@
    cursor: pointer;
 }
 
+.iframe{
+   display: flex;
+}
+
 .footer{
    display: flex;
    justify-content: space-between;
@@ -359,6 +374,11 @@
 .footer-iconTop a i{
    font-size: 2.4rem;
    color: var(--second-bg-color);
+}
+
+iframe {
+   width: 100%;
+   height: 400px;
 }
 
 @media (max-width:1200px){
