@@ -11,20 +11,34 @@ type Repo = {
 };
 
 async function getRepos(): Promise<Repo[]> {
+  if (!process.env.GITHUB_USERNAME) {
+    throw new Error("GITHUB_USERNAME is missing");
+  }
+
+  const headers: HeadersInit = {
+    Accept: "application/vnd.github+json",
+    "User-Agent": "nextjs-portfolio",
+  };
+
+  // Token OPTIONAL (biar tidak error)
+  if (process.env.GITHUB_TOKEN) {
+    headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+  }
+
   const res = await fetch(
     `https://api.github.com/users/${process.env.GITHUB_USERNAME}/repos?per_page=100`,
     {
-      headers: {
-        Accept: "application/vnd.github+json",
-        "User-Agent": "nextjs-portfolio",
-      },
+      headers,
+      cache: "no-store",
     }
   );
 
+  console.log("GitHub Status:", res.status);
+
   if (!res.ok) {
-    console.error("Status:", res.status);
-    console.error("Status Text:", res.statusText);
-    throw new Error("Failed to fetch repositories");
+    const text = await res.text();
+    console.error("GitHub Raw Response:", text);
+    throw new Error(`GitHub API failed: ${res.status}`);
   }
 
   return res.json();
