@@ -1,6 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Link from "next/link";
+import DesktopNav from "./components/DesktopNav";
+import MobileMenu from "./components/MobileMenu";
 
 export const metadata: Metadata = {
   title: "Muhammad Quthbul Alam | Fullstack Software Engineer",
@@ -25,32 +27,8 @@ export default function RootLayout({
               </span>
             </Link>
 
-            <div className="flex gap-7 text-sm">
-              <Link
-                href="/projects"
-                className="p-1 dark:hover:bg-[#161b22] rounded-sm transition-colors duration-200"
-              >
-                Projects
-              </Link>
-              <Link
-                href="/blog"
-                className="p-1 dark:hover:bg-[#161b22] rounded-sm transition-colors duration-200"
-              >
-                Blog
-              </Link>
-              <Link
-                href="/resume"
-                className="p-1 dark:hover:bg-[#161b22] rounded-sm transition-colors duration-200"
-              >
-                Resume
-              </Link>
-              <Link
-                href="/contact"
-                className="p-1 dark:hover:bg-[#161b22] rounded-sm transition-colors duration-200"
-              >
-                Contact
-              </Link>
-            </div>
+            <DesktopNav />
+            <MobileMenu />
           </nav>
         </header>
 

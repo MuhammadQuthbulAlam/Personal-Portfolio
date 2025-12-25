@@ -3,7 +3,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import ContributionGraph from "./components/ContributionGraph";
-import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaGithub,
+  FaLinkedin,
+  FaHtml5,
+  FaCss3,
+  FaJs,
+  FaPython,
+  FaNodeJs,
+  FaReact,
+  FaGit,
+} from "react-icons/fa";
 export default function HomePage() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-20">
@@ -46,7 +58,7 @@ export default function HomePage() {
               Download Resume
             </Link>
           </div>
-          <div className="pt-6 social-footer flex items-center sm:gap-7 gap-1">
+          <div className="pt-6 social-footer flex items-center sm:gap-7 gap-7">
             <a href="https://www.facebook.com/share/1AK27igrXq/">
               <FaFacebook className="ri-facebook-circle-fill text-2xl hover:text-blue-400" />
             </a>
@@ -63,6 +75,15 @@ export default function HomePage() {
         </div>
       </div>
       <ContributionGraph />
+      <div className="pt-6 social-footer flex items-center sm:gap-7 gap-5">
+        <FaHtml5 className="ri-html-fill text-5xl" />
+        <FaCss3 className="ri-css-fill text-5xl" />
+        <FaJs className="ri-js-fill text-5xl" />
+        <FaPython className="ri-python-fill text-5xl" />
+        <FaNodeJs className="ri-nodejs-fill text-5xl" />
+        <FaReact className="ri-react-fill text-5xl" />
+        <FaGit className="ri-git-fill text-5xl" />
+      </div>
     </section>
   );
 }
