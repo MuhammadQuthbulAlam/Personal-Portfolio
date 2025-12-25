@@ -73,9 +73,7 @@ export default function ResumePage() {
         <h2 className="text-xl font-semibold mb-4">Education</h2>
         <div className="border rounded p-4">
           <h3 className="font-semibold">Bachelor of Informatics</h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            Final Year Student
-          </p>
+          <p className="text-sm text-gray-600 dark:text-gray-400">IPK | 3.78</p>
         </div>
       </section>
 

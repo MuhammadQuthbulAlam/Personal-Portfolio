@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-
+import ContributionGraph from "./components/ContributionGraph";
+import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 export default function HomePage() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-20">
@@ -11,21 +14,21 @@ export default function HomePage() {
           alt="Muhammad Quthbul Alam"
           width={180}
           height={180}
-          className="rounded-full border border-gray-300 dark:border-gray-700"
+          className="rounded-3xl border border-gray-300 dark:border-gray-700"
           priority
         />
 
         {/* INTRO */}
         <div>
           <h1 className="text-3xl font-bold mb-3">
-            Hi, Saya Muhammad Quthbul Alam 👋
+            Hallo, Saya Muhammad Quthbul Alam 👋
           </h1>
 
           <p className="text-gray-600 dark:text-gray-400 max-w-xl mb-5">
-            A Fullstack Software Engineer with strong interests in frontend
-            architecture, backend systems, and applied AI. I enjoy building
-            clean, scalable, and maintainable applications inspired by
-            open-source workflows.
+            Seorang Fullstack Software Engineering dengan minat yang kuat pada
+            frontend, sistem backend, dan AI terapan. Saya senang membangun
+            aplikasi yang bersih, terukur, dan mudah dipelihara yang
+            terinspirasi oleh workflow open-source.
           </p>
 
           <div className="flex gap-4 text-sm">
@@ -33,17 +36,33 @@ export default function HomePage() {
               href="/projects"
               className="px-4 py-2 border rounded hover:bg-gray-100 dark:hover:bg-[#161b22]"
             >
-              View Projects
+              Lihat Projects
             </Link>
             <Link
-              href="/resume"
+              href="/resume.pdf"
+              download
               className="px-4 py-2 border rounded hover:bg-gray-100 dark:hover:bg-[#161b22]"
             >
               Download Resume
             </Link>
           </div>
+          <div className="pt-6 social-footer flex items-center sm:gap-7 gap-1">
+            <a href="https://www.facebook.com/share/1AK27igrXq/">
+              <FaFacebook className="ri-facebook-circle-fill text-2xl hover:text-blue-400" />
+            </a>
+            <a href="https://www.linkedin.com/in/muhammad-quthbul-alam-a46933283/">
+              <FaLinkedin className="ri-linkedin-fill text-2xl hover:text-sky-700" />
+            </a>
+            <a href="https://www.instagram.com/mochansr_?igsh=MWZhc2E1dGJpaTl3Yg==">
+              <FaInstagram className="ri-instagram-fill text-2xl hover:text-pink-500" />
+            </a>
+            <a href="https://github.com/MuhammadQuthbulAlam?tab=overview&from=2024-03-01&to=2024-03-22">
+              <FaGithub className="ri-github-fill text-2xl hover:text-green-500" />
+            </a>
+          </div>
         </div>
       </div>
+      <ContributionGraph />
     </section>
   );
 }

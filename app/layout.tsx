@@ -1,7 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Muhammad Quthbul Alam | Fullstack Software Engineer",
@@ -15,31 +14,41 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className="bg-gray-50 dark:bg-[#0d1117] text-gray-900 dark:text-gray-100">
+    <html lang="en">
+      <body className="bg-gray-50 dark:bg-[#0d1117]">
         {/* NAVBAR */}
         <header className="border-b border-gray-200 dark:border-gray-800">
           <nav className="max-w-6xl mx-auto flex justify-between items-center p-4">
             <Link href="/" className="flex items-center gap-3">
-              <Image
-                src="/profile.jpeg"
-                alt="Profile"
-                width={32}
-                height={32}
-                className="rounded-full border border-gray-300 dark:border-gray-700"
-              />
-              <span className="font-bold text-lg">Muhammad Quthbul Alam</span>
+              <span className="font-bold text-lg p-1 dark:hover:bg-[#161b22] rounded-sm transition-colors duration-200">
+                Muhammad Quthbul Alam
+              </span>
             </Link>
 
-            <div className="flex gap-4 text-sm">
-              <Link href="/projects" className="hover:underline">
+            <div className="flex gap-7 text-sm">
+              <Link
+                href="/projects"
+                className="p-1 dark:hover:bg-[#161b22] rounded-sm transition-colors duration-200"
+              >
                 Projects
               </Link>
-              <Link href="/blog" className="hover:underline">
+              <Link
+                href="/blog"
+                className="p-1 dark:hover:bg-[#161b22] rounded-sm transition-colors duration-200"
+              >
                 Blog
               </Link>
-              <Link href="/resume" className="hover:underline">
+              <Link
+                href="/resume"
+                className="p-1 dark:hover:bg-[#161b22] rounded-sm transition-colors duration-200"
+              >
                 Resume
+              </Link>
+              <Link
+                href="/contact"
+                className="p-1 dark:hover:bg-[#161b22] rounded-sm transition-colors duration-200"
+              >
+                Contact
               </Link>
             </div>
           </nav>
