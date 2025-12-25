@@ -26,12 +26,13 @@ export default function ResumePage() {
 
       {/* SUMMARY */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold mb-2">Summary</h2>
+        <h2 className="text-xl font-semibold mb-2">Ringkasan</h2>
         <p className="text-gray-700 dark:text-gray-400 leading-relaxed">
-          Final-year Informatics student with strong interest in software
-          engineering and applied research. Experienced in building modern web
-          applications using Next.js, React, Node.js, and Python, as well as
-          conducting academic research in AI and digital forensics.
+          Mahasiswa tingkat akhir Informatika dengan minat yang kuat di bidang
+          rekayasa perangkat lunak dan penelitian terapan. Berpengalaman dalam
+          membangun aplikasi web modern menggunakan Next.js, React, Node.js, dan
+          Python, serta melakukan penelitian akademis di bidang AI dan forensik
+          digital.
         </p>
       </section>
 
@@ -70,16 +71,18 @@ export default function ResumePage() {
 
       {/* EDUCATION */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold mb-4">Education</h2>
+        <h2 className="text-xl font-semibold mb-4">Pendidikan</h2>
         <div className="border rounded p-4">
-          <h3 className="font-semibold">Bachelor of Informatics</h3>
+          <h3 className="font-semibold">
+            UNIVERSITAS MAJALENGKA | Sarjana Komputer
+          </h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">IPK | 3.78</p>
         </div>
       </section>
 
       {/* PROJECTS */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold mb-4">Selected Projects</h2>
+        <h2 className="text-xl font-semibold mb-4">Proyek Pilihan</h2>
         <ul className="space-y-3 text-gray-700 dark:text-gray-400">
           <li>• Background Noise Classification using CNN (ESC-50 Dataset)</li>
           <li>• Video Manipulation Detection using SSIM</li>

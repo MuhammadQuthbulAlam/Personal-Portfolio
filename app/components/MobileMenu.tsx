@@ -6,10 +6,10 @@ import { useEffect, useState } from "react";
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
+  { href: "/projects", label: "Proyek" },
   { href: "/blog", label: "Blog" },
-  { href: "/resume", label: "Resume" },
-  { href: "/contact", label: "Contact" },
+  { href: "/resume", label: "Rinkasan" },
+  { href: "/contact", label: "Kontak" },
 ];
 
 export default function MobileMenu() {

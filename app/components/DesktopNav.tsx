@@ -4,10 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-  { href: "/projects", label: "Projects" },
+  { href: "/projects", label: "Proyek" },
   { href: "/blog", label: "Blog" },
-  { href: "/resume", label: "Resume" },
-  { href: "/contact", label: "Contact" },
+  { href: "/resume", label: "Ringkasan" },
+  { href: "/contact", label: "Kontak" },
 ];
 
 export default function DesktopNav() {

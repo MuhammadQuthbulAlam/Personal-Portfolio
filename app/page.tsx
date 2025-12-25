@@ -48,7 +48,7 @@ export default function HomePage() {
               href="/projects"
               className="px-4 py-2 border rounded hover:bg-gray-100 dark:hover:bg-[#161b22]"
             >
-              Lihat Projects
+              Lihat Proyek
             </Link>
             <Link
               href="/resume.pdf"

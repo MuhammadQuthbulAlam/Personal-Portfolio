@@ -31,35 +31,35 @@ export default function ContactPage() {
     <section className="max-w-4xl mx-auto px-6 py-20">
       {/* HEADER */}
       <div className="mb-12">
-        <h1 className="text-3xl font-bold mb-4">Contact Me</h1>
+        <h1 className="text-3xl font-bold mb-4">Kontak Saya</h1>
         <p className="text-gray-600 dark:text-gray-400 max-w-xl">
-          Feel free to reach out for collaboration, freelance projects, or just
-          to say hello.
+          Jangan ragu untuk menghubungi saya untuk kolaborasi, proyek lepas,
+          atau sekadar menyapa.
         </p>
       </div>
-
+      <hr />
       {/* GRID */}
-      <div className="grid md:grid-cols-2 gap-10">
+      <div className="pt-5 grid md:grid-cols-2 gap-10">
         {/* INFO */}
         <div className="space-y-6 text-sm">
           <div>
             <h3 className="font-semibold mb-1">Email</h3>
             <p className="text-gray-600 dark:text-gray-400">
-              muhammad.quthbul.alam@email.com
+              mochanendeavour@gmail.com
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-1">Location</h3>
+            <h3 className="font-semibold mb-1">Lokasi</h3>
             <p className="text-gray-600 dark:text-gray-400">Indonesia</p>
           </div>
 
           <div>
             <h3 className="font-semibold mb-1">Social</h3>
             <ul className="space-y-1 text-gray-600 dark:text-gray-400">
-              <li>GitHub: github.com/username</li>
-              <li>LinkedIn: linkedin.com/in/username</li>
-              <li>Instagram: @username</li>
+              <li>GitHub: github.com/MuhammadQuthbulAlam</li>
+              <li>LinkedIn: linkedin.com/in/MuhammadQuthbulAlam</li>
+              <li>Instagram: @mochansr_</li>
             </ul>
           </div>
         </div>

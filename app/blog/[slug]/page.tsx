@@ -1,30 +1,31 @@
-import fs from "fs";
-import path from "path";
+import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { notFound } from "next/navigation";
 
-type Props = {
-  params: {
-    slug?: string;
-  };
-};
+export function generateStaticParams() {
+  return getAllPosts().map((post) => ({
+    slug: post.slug,
+  }));
+}
 
-export default async function BlogPost({ params }: Props) {
-  if (!params?.slug) {
+export function generateMetadata({ params }: any) {
+  const post = getPostBySlug(params.slug);
+  return { title: post.title };
+}
+
+export default function BlogDetail({ params }: any) {
+  try {
+    const post = getPostBySlug(params.slug);
+
+    return (
+      <article className="max-w-3xl mx-auto px-6 py-20 prose dark:prose-invert">
+        <h1>{post.title}</h1>
+        <p className="text-sm text-gray-500">{post.date}</p>
+
+        {/* RENDER MDX SEBAGAI HTML */}
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      </article>
+    );
+  } catch {
     notFound();
   }
-
-  const filePath = path.join(process.cwd(), "posts", `${params.slug}.mdx`);
-
-  if (!fs.existsSync(filePath)) {
-    notFound();
-  }
-
-  const source = fs.readFileSync(filePath, "utf8");
-
-  return (
-    <article className="max-w-3xl mx-auto px-6 py-16 prose dark:prose-invert">
-      <h1>{params.slug.replace(/-/g, " ")}</h1>
-      <pre>{source}</pre>
-    </article>
-  );
 }

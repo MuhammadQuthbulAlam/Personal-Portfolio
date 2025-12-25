@@ -1,27 +1,32 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import Link from "next/link";
+import { getAllPosts } from "@/lib/blog";
+
+export const metadata = {
+  title: "Blog",
+};
 
 export default function BlogPage() {
-  const postsDir = path.join(process.cwd(), "posts");
-  const files = fs.readdirSync(postsDir);
-
-  const posts = files.map((file) => {
-    const source = fs.readFileSync(path.join(postsDir, file), "utf8");
-    const { data } = matter(source);
-    return { slug: file.replace(".mdx", ""), title: data.title };
-  });
+  const posts = getAllPosts();
 
   return (
-    <main className="p-10 max-w-3xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Blog</h1>
-      {posts.map((post) => (
-        <div key={post.slug}>
-          <a href={`/blog/${post.slug}`} className="text-blue-600">
-            {post.title}
-          </a>
-        </div>
-      ))}
-    </main>
+    <section className="max-w-4xl mx-auto px-6 py-20">
+      <h1 className="text-3xl font-bold mb-10">Blog</h1>
+
+      <div className="space-y-6">
+        {posts.map((post) => (
+          <Link
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className="block border rounded p-5 hover:bg-gray-50 dark:hover:bg-[#161b22]"
+          >
+            <h2 className="text-xl font-semibold">{post.title}</h2>
+            <p className="text-sm text-gray-500">{post.date}</p>
+            <p className="mt-3 text-gray-600 dark:text-gray-400">
+              {post.excerpt}
+            </p>
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 }
