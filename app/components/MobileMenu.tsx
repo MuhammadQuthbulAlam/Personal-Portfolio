@@ -58,12 +58,12 @@ export default function MobileMenu() {
         ${open ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="p-5 space-y-6">
-          <button
+          <div
             onClick={() => setOpen(false)}
-            className="text-sm border px-3 py-1 rounded"
+            className="text-sm px-3 py-1 rounded"
           >
-            ✕ Close
-          </button>
+            Mochan Endeavour
+          </div>
 
           <nav className="flex flex-col gap-3 text-sm">
             {navItems.map((item) => {
