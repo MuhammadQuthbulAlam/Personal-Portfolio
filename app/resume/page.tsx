@@ -28,17 +28,16 @@ export default function ResumePage() {
       <section className="mb-10">
         <h2 className="text-xl font-semibold mb-2">Ringkasan</h2>
         <p className="text-gray-700 dark:text-gray-400 leading-relaxed">
-          Mahasiswa tingkat akhir Informatika dengan minat yang kuat di bidang
-          rekayasa perangkat lunak dan penelitian terapan. Berpengalaman dalam
-          membangun aplikasi web modern menggunakan Next.js, React, Node.js, dan
-          Python, serta melakukan penelitian akademis di bidang AI dan forensik
-          digital.
+          Fresh Graduate Informatika dengan minat yang kuat di bidang rekayasa
+          perangkat lunak dan penelitian terapan. Berpengalaman dalam membangun
+          aplikasi web modern menggunakan Next.js, React, Node.js, dan Python,
+          serta melakukan penelitian akademis di bidang AI dan forensik digital.
         </p>
       </section>
 
       {/* SKILLS */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold mb-4">Skills</h2>
+        <h2 className="text-xl font-semibold mb-4">Skill</h2>
         <div className="grid md:grid-cols-3 gap-4 text-sm">
           <div className="border rounded p-4">
             <h3 className="font-semibold mb-2">Frontend</h3>
@@ -93,10 +92,11 @@ export default function ResumePage() {
       {/* ACTION */}
       <section className="mt-12">
         <Link
-          href="#"
+          href="./resume.pdf"
+          download
           className="inline-block px-4 py-2 border rounded hover:bg-gray-100 dark:hover:bg-[#161b22]"
         >
-          Download PDF (Coming Soon)
+          Download PDF
         </Link>
       </section>
     </section>

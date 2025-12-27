@@ -44,17 +44,16 @@ async function getRepos(): Promise<Repo[]> {
   return res.json();
 }
 
-
 export default async function ProjectsPage() {
   const repos = await getRepos();
 
   return (
     <section className="max-w-6xl mx-auto px-6 py-16">
-      <h1 className="text-3xl font-bold mb-6">Projects</h1>
+      <h1 className="text-3xl font-bold mb-6">Proyek</h1>
 
       <p className="text-gray-600 dark:text-gray-400 mb-10 max-w-2xl">
-        A collection of my open-source and academic projects covering frontend,
-        backend, and AI-related development.
+        Kumpulan proyek open-source dan akademis saya yang mencakup pengembangan
+        frontend, backend, dan yang berkaitan dengan AI.
       </p>
 
       {/* FILTER INFO */}
